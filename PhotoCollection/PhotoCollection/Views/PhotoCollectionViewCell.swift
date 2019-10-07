@@ -70,3 +70,5 @@ class PhotoCollectionViewCell: UICollectionViewCell {
 		nameLabel.text = photo.title
 	}
 }
+
+
