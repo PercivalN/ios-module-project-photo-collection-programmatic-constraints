@@ -22,3 +22,8 @@ class ThemeSelectionViewController: UIViewController {
     
     var themeHelper: ThemeHelper?
 }
+
+func setupSubviews() {
+
+	
+}

@@ -33,10 +33,17 @@ class PhotoDetailViewController: UIViewController, UIImagePickerControllerDelega
 	// MARK: - Setup subViews
 	func setupSubviews() {
 
+		let imageView = UIImageView()
+		let addImageButton = UIButton()
+		let titleTextField = UITextField()
+
 		// Adds all the objects to the view at once
 		view.addSubview(imageView)
+		self.imageView = imageView
 		view.addSubview(addImageButton)
+		self.addImageButton = addImageButton
 		view.addSubview(titleTextField)
+		self.titleTextField = titleTextField
 
 		// ImageView Constraints
 		imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,8 +60,8 @@ class PhotoDetailViewController: UIViewController, UIImagePickerControllerDelega
 		savePhoto()
 
 		// addImage button constraints
-		addImageButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
-		addImageButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
+		addImageButton.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20).isActive = true
+		addImageButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
 
 
 		titleTextField.translatesAutoresizingMaskIntoConstraints = false
